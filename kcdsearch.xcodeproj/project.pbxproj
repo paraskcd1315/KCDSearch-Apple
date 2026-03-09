@@ -6,8 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E6996A7E2F5E0CE0004A412C /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A7D2F5E0CE0004A412C /* SearchResult.swift */; };
+		E6996A7F2F5E0CE8004A412C /* SearchApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A792F5E0C10004A412C /* SearchApiConstants.swift */; };
+		E6996A812F5E0D59004A412C /* SearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A802F5E0D59004A412C /* SearchResultResponse.swift */; };
+		E6996A842F5E0D8D004A412C /* SearchRequestDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A832F5E0D8D004A412C /* SearchRequestDto.swift */; };
+		E6996A872F5E0E43004A412C /* SearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A862F5E0E43004A412C /* SearchApi.swift */; };
+		E6996A892F5E0E81004A412C /* SearchApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A882F5E0E81004A412C /* SearchApiImpl.swift */; };
+		E6996A8C2F5E0ECA004A412C /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A8B2F5E0ECA004A412C /* SearchRepository.swift */; };
+		E6996A8F2F5E113B004A412C /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A8E2F5E113B004A412C /* SearchService.swift */; };
+		E6996A942F5F85D5004A412C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A932F5F85D5004A412C /* HomeViewModel.swift */; };
+		E6996A962F5F8603004A412C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A952F5F8603004A412C /* SearchViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E6996A6A2F5E0829004A412C /* kcdsearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kcdsearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6996A792F5E0C10004A412C /* SearchApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApiConstants.swift; sourceTree = "<group>"; };
+		E6996A7D2F5E0CE0004A412C /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		E6996A802F5E0D59004A412C /* SearchResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponse.swift; sourceTree = "<group>"; };
+		E6996A832F5E0D8D004A412C /* SearchRequestDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestDto.swift; sourceTree = "<group>"; };
+		E6996A862F5E0E43004A412C /* SearchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApi.swift; sourceTree = "<group>"; };
+		E6996A882F5E0E81004A412C /* SearchApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApiImpl.swift; sourceTree = "<group>"; };
+		E6996A8B2F5E0ECA004A412C /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		E6996A8E2F5E113B004A412C /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		E6996A932F5F85D5004A412C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E6996A952F5F8603004A412C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +55,10 @@
 		E6996A612F5E0829004A412C = {
 			isa = PBXGroup;
 			children = (
+				E6996A902F5F85B5004A412C /* ui */,
+				E6996A8D2F5E1126004A412C /* services */,
+				E6996A7A2F5E0C85004A412C /* data */,
+				E6996A782F5E0BFF004A412C /* constants */,
 				E6996A6C2F5E0829004A412C /* kcdsearch */,
 				E6996A6B2F5E0829004A412C /* Products */,
 			);
@@ -43,6 +70,100 @@
 				E6996A6A2F5E0829004A412C /* kcdsearch.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6996A782F5E0BFF004A412C /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A792F5E0C10004A412C /* SearchApiConstants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		E6996A7A2F5E0C85004A412C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A8A2F5E0EAA004A412C /* repositories */,
+				E6996A822F5E0D73004A412C /* dtos */,
+				E6996A7B2F5E0C8C004A412C /* api */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		E6996A7B2F5E0C8C004A412C /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A852F5E0E11004A412C /* search */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		E6996A7C2F5E0C96004A412C /* dataSources */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A7D2F5E0CE0004A412C /* SearchResult.swift */,
+				E6996A802F5E0D59004A412C /* SearchResultResponse.swift */,
+			);
+			path = dataSources;
+			sourceTree = "<group>";
+		};
+		E6996A822F5E0D73004A412C /* dtos */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A832F5E0D8D004A412C /* SearchRequestDto.swift */,
+			);
+			path = dtos;
+			sourceTree = "<group>";
+		};
+		E6996A852F5E0E11004A412C /* search */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A7C2F5E0C96004A412C /* dataSources */,
+				E6996A862F5E0E43004A412C /* SearchApi.swift */,
+				E6996A882F5E0E81004A412C /* SearchApiImpl.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		E6996A8A2F5E0EAA004A412C /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A8B2F5E0ECA004A412C /* SearchRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		E6996A8D2F5E1126004A412C /* services */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A8E2F5E113B004A412C /* SearchService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		E6996A902F5F85B5004A412C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A922F5F85C2004A412C /* search */,
+				E6996A912F5F85BD004A412C /* home */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		E6996A912F5F85BD004A412C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A932F5F85D5004A412C /* HomeViewModel.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		E6996A922F5F85C2004A412C /* search */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A952F5F8603004A412C /* SearchViewModel.swift */,
+			);
+			path = search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +240,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6996A892F5E0E81004A412C /* SearchApiImpl.swift in Sources */,
+				E6996A942F5F85D5004A412C /* HomeViewModel.swift in Sources */,
+				E6996A842F5E0D8D004A412C /* SearchRequestDto.swift in Sources */,
+				E6996A872F5E0E43004A412C /* SearchApi.swift in Sources */,
+				E6996A7F2F5E0CE8004A412C /* SearchApiConstants.swift in Sources */,
+				E6996A962F5F8603004A412C /* SearchViewModel.swift in Sources */,
+				E6996A7E2F5E0CE0004A412C /* SearchResult.swift in Sources */,
+				E6996A8C2F5E0ECA004A412C /* SearchRepository.swift in Sources */,
+				E6996A812F5E0D59004A412C /* SearchResultResponse.swift in Sources */,
+				E6996A8F2F5E113B004A412C /* SearchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +381,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KCD Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -292,6 +425,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KCD Search";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
