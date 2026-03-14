@@ -35,4 +35,19 @@ struct SearchApiImpl: SearchApi {
         let (data, _) = try await URLSession.shared.data(from: components.url!)
         return try JSONDecoder().decode(SearchResultResponse.self, from: data)
     }
+    
+    func autocomplete(query: String) async throws -> [String] {
+            var components = URLComponents(string: SearchApiConstants.baseURL + SearchApiConstants.autocompletePath)!
+            components.queryItems = [URLQueryItem(name: "q", value: query)]
+
+            let (data, _) = try await URLSession.shared.data(from: components.url!)
+
+            // OpenSearch format: ["query", ["suggestion1", "suggestion2", ...]]
+            let decoded = try JSONDecoder().decode([JSONValue].self, from: data)
+            if decoded.count >= 2, case .array(let suggestions) = decoded[1] {
+                return suggestions.compactMap { if case .string(let s) = $0 { return s } else { return nil } }
+            }
+            return []
+        }
+
 }

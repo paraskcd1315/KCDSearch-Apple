@@ -10,4 +10,5 @@ import Foundation
 enum SearchApiConstants {
     static let baseURL = "https://kcdsearch.com"
     static let searchPath = "/api/search"
+    static let autocompletePath = "/api/autocomplete"
 }

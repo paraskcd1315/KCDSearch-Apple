@@ -22,4 +22,13 @@ class SearchRepository {
             return .failure(error)
         }
     }
+    
+    func autocomplete(query: String) async -> Result<[String], Error> {
+        do {
+            let suggestions = try await searchApi.autocomplete(query: query)
+            return .success(suggestions)
+        } catch {
+            return .failure(error)
+        }
+    }
 }

@@ -22,6 +22,7 @@
 		E6996AA22F653BE1004A412C /* WebResultCardParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA12F653BE1004A412C /* WebResultCardParams.swift */; };
 		E6996AA42F653C41004A412C /* WebResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA32F653C41004A412C /* WebResultCard.swift */; };
 		E6996AA92F654652004A412C /* SemiOpaqueWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */; };
+		E6996AAC2F654828004A412C /* JSONValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AAB2F654828004A412C /* JSONValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E6996AA12F653BE1004A412C /* WebResultCardParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultCardParams.swift; sourceTree = "<group>"; };
 		E6996AA32F653C41004A412C /* WebResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultCard.swift; sourceTree = "<group>"; };
 		E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiOpaqueWindow.swift; sourceTree = "<group>"; };
+		E6996AAB2F654828004A412C /* JSONValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -216,6 +218,7 @@
 		E6996AA52F654473004A412C /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E6996AAA2F65480E004A412C /* parsers */,
 				E6996AA72F65448A004A412C /* extensions */,
 			);
 			path = utils;
@@ -227,6 +230,14 @@
 				E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		E6996AAA2F65480E004A412C /* parsers */ = {
+			isa = PBXGroup;
+			children = (
+				E6996AAB2F654828004A412C /* JSONValue.swift */,
+			);
+			path = parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				E6996AA92F654652004A412C /* SemiOpaqueWindow.swift in Sources */,
 				E6996A812F5E0D59004A412C /* SearchResultResponse.swift in Sources */,
 				E6996AA22F653BE1004A412C /* WebResultCardParams.swift in Sources */,
+				E6996AAC2F654828004A412C /* JSONValue.swift in Sources */,
 				E6996A8F2F5E113B004A412C /* SearchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
