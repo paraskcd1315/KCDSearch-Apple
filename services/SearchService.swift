@@ -17,13 +17,20 @@ final class SearchService {
 
     private(set) var results: [SearchResult] = []
     private(set) var isLoading = false
-    
     private(set) var error: String? = nil
     private(set) var currentPage = 1
     private(set) var hasMorePages = true
     private(set) var totalResults = 0
 
+    private(set) var suggestions: [String] = []
+    private(set) var isSuggestionsLoading = false
+    private(set) var suggestionsError: String? = nil
+
+    private var suggestionsTask: Task<Void, Never>?
+
     private init() {}
+
+    // MARK: - Search
 
     func search(request: SearchRequestDto) async {
         isLoading = true
@@ -65,11 +72,53 @@ final class SearchService {
         isLoading = false
     }
 
+    // MARK: - Autocomplete
+
+    func requestSuggestionsDebounced(query: String) {
+        suggestionsTask?.cancel()
+        suggestions = []
+        isSuggestionsLoading = true
+
+        suggestionsTask = Task {
+            try? await Task.sleep(for: .milliseconds(500))
+            guard !Task.isCancelled else { return }
+            await fetchSuggestions(query: query)
+        }
+    }
+
+    private func fetchSuggestions(query: String) async {
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else {
+            suggestions = []
+            isSuggestionsLoading = false
+            return
+        }
+
+        let result = await searchRepository.autocomplete(query: trimmed)
+
+        switch result {
+        case .success(let items):
+            suggestions = items
+        case .failure(let err):
+            suggestionsError = err.localizedDescription
+        }
+
+        isSuggestionsLoading = false
+    }
+
+    func clearSuggestions() {
+        suggestionsTask?.cancel()
+        suggestions = []
+        isSuggestionsLoading = false
+        suggestionsError = nil
+    }
+
     func clear() {
         results = []
         error = nil
         currentPage = 1
         hasMorePages = true
         totalResults = 0
+        clearSuggestions()
     }
 }
