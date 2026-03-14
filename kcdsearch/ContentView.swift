@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var pendingQuery: String?
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            HomeScreen(pendingQuery: $pendingQuery)
+                .navigationDestination(item: $pendingQuery) { query in
+                    SearchScreen(query: query)
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environment(HomeViewModel())
+        .environment(SearchViewModel())
 }
+
