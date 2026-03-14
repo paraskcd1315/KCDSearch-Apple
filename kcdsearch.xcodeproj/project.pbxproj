@@ -17,6 +17,11 @@
 		E6996A8F2F5E113B004A412C /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A8E2F5E113B004A412C /* SearchService.swift */; };
 		E6996A942F5F85D5004A412C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A932F5F85D5004A412C /* HomeViewModel.swift */; };
 		E6996A962F5F8603004A412C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A952F5F8603004A412C /* SearchViewModel.swift */; };
+		E6996A9B2F653A83004A412C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A9A2F653A83004A412C /* HomeScreen.swift */; };
+		E6996A9E2F653B44004A412C /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996A9D2F653B44004A412C /* SearchScreen.swift */; };
+		E6996AA22F653BE1004A412C /* WebResultCardParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA12F653BE1004A412C /* WebResultCardParams.swift */; };
+		E6996AA42F653C41004A412C /* WebResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA32F653C41004A412C /* WebResultCard.swift */; };
+		E6996AA92F654652004A412C /* SemiOpaqueWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		E6996A8E2F5E113B004A412C /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		E6996A932F5F85D5004A412C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E6996A952F5F8603004A412C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E6996A9A2F653A83004A412C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		E6996A9D2F653B44004A412C /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
+		E6996AA12F653BE1004A412C /* WebResultCardParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultCardParams.swift; sourceTree = "<group>"; };
+		E6996AA32F653C41004A412C /* WebResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResultCard.swift; sourceTree = "<group>"; };
+		E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiOpaqueWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -55,6 +65,7 @@
 		E6996A612F5E0829004A412C = {
 			isa = PBXGroup;
 			children = (
+				E6996AA52F654473004A412C /* utils */,
 				E6996A902F5F85B5004A412C /* ui */,
 				E6996A8D2F5E1126004A412C /* services */,
 				E6996A7A2F5E0C85004A412C /* data */,
@@ -153,6 +164,7 @@
 		E6996A912F5F85BD004A412C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				E6996A992F653A72004A412C /* screens */,
 				E6996A932F5F85D5004A412C /* HomeViewModel.swift */,
 			);
 			path = home;
@@ -161,9 +173,60 @@
 		E6996A922F5F85C2004A412C /* search */ = {
 			isa = PBXGroup;
 			children = (
+				E6996A9F2F653BA0004A412C /* components */,
+				E6996A9C2F653B30004A412C /* screens */,
 				E6996A952F5F8603004A412C /* SearchViewModel.swift */,
 			);
 			path = search;
+			sourceTree = "<group>";
+		};
+		E6996A992F653A72004A412C /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A9A2F653A83004A412C /* HomeScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		E6996A9C2F653B30004A412C /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				E6996A9D2F653B44004A412C /* SearchScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		E6996A9F2F653BA0004A412C /* components */ = {
+			isa = PBXGroup;
+			children = (
+				E6996AA02F653BBA004A412C /* webResultCard */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		E6996AA02F653BBA004A412C /* webResultCard */ = {
+			isa = PBXGroup;
+			children = (
+				E6996AA12F653BE1004A412C /* WebResultCardParams.swift */,
+				E6996AA32F653C41004A412C /* WebResultCard.swift */,
+			);
+			path = webResultCard;
+			sourceTree = "<group>";
+		};
+		E6996AA52F654473004A412C /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E6996AA72F65448A004A412C /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		E6996AA72F65448A004A412C /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6996AA82F654628004A412C /* SemiOpaqueWindow.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,12 +306,17 @@
 				E6996A892F5E0E81004A412C /* SearchApiImpl.swift in Sources */,
 				E6996A942F5F85D5004A412C /* HomeViewModel.swift in Sources */,
 				E6996A842F5E0D8D004A412C /* SearchRequestDto.swift in Sources */,
+				E6996A9E2F653B44004A412C /* SearchScreen.swift in Sources */,
 				E6996A872F5E0E43004A412C /* SearchApi.swift in Sources */,
+				E6996AA42F653C41004A412C /* WebResultCard.swift in Sources */,
 				E6996A7F2F5E0CE8004A412C /* SearchApiConstants.swift in Sources */,
+				E6996A9B2F653A83004A412C /* HomeScreen.swift in Sources */,
 				E6996A962F5F8603004A412C /* SearchViewModel.swift in Sources */,
 				E6996A7E2F5E0CE0004A412C /* SearchResult.swift in Sources */,
 				E6996A8C2F5E0ECA004A412C /* SearchRepository.swift in Sources */,
+				E6996AA92F654652004A412C /* SemiOpaqueWindow.swift in Sources */,
 				E6996A812F5E0D59004A412C /* SearchResultResponse.swift in Sources */,
+				E6996AA22F653BE1004A412C /* WebResultCardParams.swift in Sources */,
 				E6996A8F2F5E113B004A412C /* SearchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +446,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "KCD Search";
@@ -422,7 +500,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "KCD Search";

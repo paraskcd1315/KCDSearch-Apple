@@ -14,32 +14,55 @@ struct HomeScreen: View {
     var body: some View {
         @Bindable var viewModel = viewModel
 
-        VStack(spacing: 16) {
-            Spacer()
+        ZStack {
+            #if os(macOS)
+            Rectangle.semiOpaqueWindow().padding(-1)
+            #else
+            Color.clear
+                .background(.ultraThinMaterial)
+                .ignoresSafeArea()
+            #endif
+            
+            VStack(spacing: 16) {
+                Spacer()
 
-            Image(systemName: "magnifyingglass")
-                .font(.system(size: 64))
-                .foregroundStyle(.secondary)
+                Image("KCDSearchLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 120)
 
-            Text("KCDSearch")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-
-            TextField("Search...", text: $viewModel.query)
-                .textFieldStyle(.roundedBorder)
-                .padding(.horizontal, 32)
-                .onSubmit {
-                    let trimmed = viewModel.trimmedQuery()
-                    if !trimmed.isEmpty {
-                        pendingQuery = trimmed
+                TextField("Search...", text: $viewModel.query)
+                    .textFieldStyle(.plain)
+                    .padding(12)
+                    .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(.ultraThinMaterial)
+                    )
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke(.quaternary, lineWidth: 1)
+                    )
+                    .padding(.horizontal, 32)
+                    .onSubmit {
+                        let trimmed = viewModel.trimmedQuery()
+                        if !trimmed.isEmpty {
+                            pendingQuery = trimmed
+                        }
                     }
-                }
-                #if !os(macOS)
-                .textInputAutocapitalization(.never)
-                #endif
-                .autocorrectionDisabled()
+                    #if !os(macOS)
+                    .textInputAutocapitalization(.never)
+                    #endif
+                    .autocorrectionDisabled()
 
-            Spacer()
+                Spacer()
+            }
+            #if os(macOS)
+            .frame(maxWidth: 600)
+            #endif
         }
+        #if os(macOS)
+        .toolbarBackgroundVisibility(.hidden, for: .windowToolbar)
+        #endif
+        .navigationTitle("")
     }
 }
